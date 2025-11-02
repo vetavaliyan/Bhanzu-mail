@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhanzu - Mathematics Excellence Program</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; line-height: 1.6; color: #1F2937; background-color: #f7f8fc; padding: 20px; }
+        .email-container { max-width: 600px; margin: 0 auto; background-color: white; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08); border-radius: 8px; overflow: hidden; }
+        .header { background: #1E3A8A; padding: 30px 20px; text-align: center; color: white; }
+        .logo-container { margin-bottom: 15px; }
+        .logo { width: 150px; height: auto; vertical-align: middle; }
+        .brand-subtitle { font-size: 16px; opacity: 0.9; margin-top: 10px; }
+        .stats { background: #F59E0B; border-radius: 6px; padding: 8px 16px; display: inline-block; margin-top: 15px; font-size: 14px; color: #1F2937; font-weight: 600; }
+        .content-section { padding: 30px 20px; }
+        .greeting h2 { font-size: 26px; color: #1F2937; margin-bottom: 15px; font-weight: 600; }
+        .greeting p { color: #374151; font-size: 16px; line-height: 1.7; }
+        .benefits-section { background: #F7F8FC; padding: 30px 20px; }
+        .section-title { font-size: 22px; color: #1F2937; margin-bottom: 20px; font-weight: 600; border-bottom: 2px solid #E5E7EB; padding-bottom: 10px; }
+        .benefit-item { display: flex; align-items: flex-start; margin: 15px 0; }
+        .check-mark { color: #10B981; font-size: 18px; margin-right: 12px; font-weight: bold; }
+        .benefit-text { color: #374151; font-size: 15px; }
+        .divider { height: 1px; background: #E5E7EB; margin: 0; }
+        .offer-section { padding: 30px 20px; }
+        .urgency-notice { background: #FEF3C7; border-left: 4px solid #F59E0B; border-radius: 4px; padding: 20px; margin-bottom: 25px; }
+        .urgency-notice h4 { color: #1F2937; font-size: 18px; margin-bottom: 8px; font-weight: 700; }
+        .urgency-notice p { color: #374151; font-size: 15px; }
+        .highlight { color: #DC2626; font-weight: bold; }
+        .pricing-box { background: #F7F8FC; border: 1px solid #10B981; border-radius: 8px; padding: 20px; margin: 20px 0; }
+        .pricing-box h4 { color: #1F2937; font-size: 18px; margin-bottom: 15px; font-weight: 700; border-bottom: 1px dashed #D1D5DB; padding-bottom: 8px; }
+        .pricing-item { background: white; border-radius: 6px; border: 1px solid #D1D5DB; padding: 15px; margin: 12px 0; display: flex; justify-content: space-between; align-items: center; }
+        .pricing-details h5 { color: #1F2937; font-weight: 600; margin-bottom: 2px; font-size: 15px; }
+        .pricing-details p { color: #6B7280; font-size: 13px; }
+        .pricing-amount { color: #1E3A8A; font-size: 24px; font-weight: bold; }
+        .pricing-amount.dark { color: #1F2937; }
+        .pricing-unit { color: #9CA3AF; font-size: 12px; }
+        .payment-box { background: #F7F8FC; border-radius: 8px; border: 1px solid #E5E7EB; padding: 20px; margin: 25px 0; }
+        .payment-box h4 { color: #1F2937; font-size: 18px; font-weight: 700; margin-bottom: 12px; }
+        .payment-summary { display: flex; justify-content: space-between; align-items: center; }
+        .payment-total { color: #1F2937; font-size: 28px; font-weight: bold; }
+        .payment-due { color: #6B7280; font-size: 12px; }
+        .small-text { font-size: 13px; color: #6B7280; }
+        .enrollment-section { background: white; padding: 30px 20px; }
+        .enrollment-intro { color: #374151; font-size: 16px; margin-bottom: 20px; }
+        .enrollment-list { display: grid; gap: 12px; }
+        .enrollment-item { background: #F7F8FC; border-radius: 6px; border: 1px solid #E5E7EB; padding: 12px; display: flex; align-items: center; }
+        .item-number { width: 24px; height: 24px; background: #374151; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px; flex-shrink: 0; }
+        .item-number span { color: white; font-size: 12px; font-weight: bold; }
+        .item-text { color: #374151; font-weight: 500; font-size: 14px; }
+        .counsellor-section { background: #F7F8FC; padding: 30px 20px; }
+        .counsellor-card { background: white; border-radius: 8px; border: 1px solid #E5E7EB; padding: 20px; }
+        .counsellor-content { display: flex; align-items: flex-start; }
+        .counsellor-avatar { width: 50px; height: 50px; background: #1E3A8A; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0; }
+        .counsellor-avatar span { color: white; font-weight: bold; font-size: 16px; }
+        .counsellor-details h4 { color: #1F2937; font-size: 18px; font-weight: 700; }
+        .counsellor-title { color: #6B7280; font-size: 14px; margin-bottom: 8px; }
+        .counsellor-description { color: #374151; font-size: 14px; }
+        .cta-section { background: #1F2937; color: white; padding: 40px 20px; text-align: center; }
+        .cta-content h3 { font-size: 24px; margin-bottom: 12px; font-weight: 600; }
+        .cta-content p { color: #D1D5DB; font-size: 16px; margin-bottom: 25px; }
+        .cta-buttons { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        .btn { padding: 12px 24px; border-radius: 6px; font-weight: 700; font-size: 15px; text-decoration: none; display: inline-block; transition: all 0.2s; }
+        .btn-primary { background: #F59E0B; color: #1F2937; }
+        .btn-secondary { border: 2px solid white; color: white; background: transparent; }
+        .footer { background: #E5E7EB; padding: 20px; text-align: center; border-top: 1px solid #D1D5DB; }
+        .footer-contact { color: #4B5563; font-size: 13px; margin: 5px 15px; display: inline-block; }
+        .footer-copyright { color: #9CA3AF; font-size: 12px; margin-top: 10px; }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .email-container { margin: 0; box-shadow: none; border-radius: 0; }
+            .header, .content-section, .benefits-section, .offer-section, .counsellor-section, .cta-section { padding: 25px 15px; }
+            .pricing-item, .payment-summary { flex-direction: column; text-align: center; gap: 8px; }
+            .counsellor-content { flex-direction: column; text-align: center; align-items: center; }
+            .counsellor-avatar { margin-right: 0; margin-bottom: 15px; }
+            .cta-buttons { flex-direction: column; }
+            .footer-contact { display: block; margin: 8px 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header with Bhanzu Logo -->
+        <div class="header">
+            <div class="logo-container">
+                <img src="https://assets-global.website-files.com/624c459b6269273c54832502/624c53d10a2634427b385e49_Bhanzu_logo.svg" alt="Bhanzu Logo" class="logo">
+            </div>
+            <div class="brand-subtitle">Mathematics Excellence Program</div>
+            <div class="stats">50,000+ Students Worldwide</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content-section">
+            <div class="greeting">
+                <h2>Dear Parent,</h2>
+                <p>We are delighted to present an exclusive opportunity for your child to join our <strong>Advanced Mathematics Program</strong>. Our curriculum is designed by leading educators to foster mathematical excellence and analytical thinking skills that will benefit your child for life.</p>
+            </div>
+        </div>
+
+        <!-- Key Benefits -->
+        <div class="benefits-section">
+            <h3 class="section-title">Program Benefits</h3>
+            <div class="benefit-item"><span class="check-mark">✓</span><span class="benefit-text">Comprehensive learning experience tailored to your child's needs</span></div>
+            <div class="benefit-item"><span class="check-mark">✓</span><span class="benefit-text">Exclusive AI bot assistance for round-the-clock support</span></div>
+            <div class="benefit-item"><span class="check-mark">✓</span><span class="benefit-text">Detailed progress tracking and performance reports</span></div>
+            <div class="benefit-item"><span class="check-mark">✓</span><span class="benefit-text">24/7 access to our comprehensive learning platform</span></div>
+            <div class="benefit-item"><span class="check-mark">✓</span><span class="benefit-text">Certificate of completion upon program graduation</span></div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Special Offer & Pricing -->
+        <div class="offer-section">
+            <h3 class="section-title">Early Bird Enrollment Opportunity</h3>
+            <div class="urgency-notice">
+                <h4>Limited Availability Notice</h4>
+                <p>The Early Bird offer is closing soon. We have only <span class="highlight">1 enrollment slot remaining</span> at this rate.</p>
+                <p class="small-text">Following this offer period, enrollment will revert to our Standard Website Pricing.</p>
+            </div>
+
+            <div class="pricing-box">
+                <h4>Exclusive Pricing Structure</h4>
+                <div class="pricing-item">
+                    <div class="pricing-details">
+                        <h5>Session Rate</h5>
+                        <p>Per individual session</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="pricing-amount">$16</div>
+                        <div class="pricing-unit">per session</div>
+                    </div>
+                </div>
+                <div class="pricing-item">
+                    <div class="pricing-details">
+                        <h5>Complete Program</h5>
+                        <p>Total for 15 sessions</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="pricing-amount dark">$240</div>
+                        <div class="pricing-unit">program total</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-box">
+                <h4>Initial Payment Requirement</h4>
+                <div class="payment-summary">
+                    <div>
+                        <p>First Installment + Registration</p>
+                        <p class="small-text">($240 program fee + $50 registration)</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="payment-total">$290</div>
+                        <div class="payment-due">due at enrollment</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Enrollment Information -->
+        <div class="enrollment-section">
+            <h3 class="section-title">Enrollment Information Required</h3>
+            <p class="enrollment-intro">To secure your child's position in this exclusive program, please provide the following information:</p>
+            <div class="enrollment-list">
+                <div class="enrollment-item"><div class="item-number"><span>1</span></div><span class="item-text">Student Full Name</span></div>
+                <div class="enrollment-item"><div class="item-number"><span>2</span></div><span class="item-text">Parent/Guardian Name</span></div>
+                <div class="enrollment-item"><div class="item-number"><span>3</span></div><span class="item-text">Student Date of Birth</span></div>
+                <div class="enrollment-item"><div class="item-number"><span>4</span></div><span class="item-text">Current Grade Level</span></div>
+                <div class="enrollment-item"><div class="item-number"><span>5</span></div><span class="item-text">Zip/Postal Code</span></div>
+                <div class="enrollment-item"><div class="item-number"><span>6</span></div><span class="item-text">Time Zone</span></div>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+
+        <!-- Academic Counsellor Info -->
+        <div class="counsellor-section">
+            <h3 class="section-title">Your Dedicated Academic Counsellor</h3>
+            <div class="counsellor-card">
+                <div class="counsellor-content">
+                    <div class="counsellor-avatar"><span>AS</span></div>
+                    <div class="counsellor-details">
+                        <h4>Abhinav Shinesh</h4>
+                        <p class="counsellor-title">Academic Counsellor, Bhanzu</p>
+                        <p class="counsellor-description">Available to provide personalized guidance throughout your child's learning journey and address any program-related inquiries.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <div class="cta-content">
+                <h3>Secure Your Child's Future in Mathematics</h3>
+                <p>Join our community of families worldwide who have chosen excellence.</p>
+                <div class="cta-buttons">
+                    <a href="mailto:abhinav.shinesh_14325@expinfi.com?subject=Enrollment Inquiry - Securing Spot" class="btn btn-primary">Confirm Enrollment</a>
+                    <a href="mailto:abhinav.shinesh_14325@expinfi.com?subject=Question about the Mathematics Program" class="btn btn-secondary">Contact Counsellor</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-contact">Email: support@bhanzu.com</div>
+            <div class="footer-contact">Support: +1 (332) 334-7019</div>
+            <div class="footer-copyright">© 2025 Bhanzu. All rights reserved.</div>
+        </div>
+        
+        <!-- The tracking pixel would be invisible here -->
+        <img src="#" width="1" height="1" style="display:none;" alt="">
+    </div>
+</body>
+</html>
