@@ -1,2 +1,2 @@
 # Bhanzu-mail
-Created an Appscripts mail front end to send it to the customers about enrolment.
+Creted an interactive and professional mail front end to send it to Bhanzu customers. This was then linked into App scrits to automate mails. The emails would be added to the spreadsheet lists from which it was later sent at a click of a button. This helped the time taken for the sales team to send mails more efficiently by sending mails at a matter of time with this template and saved 50% of their time to send mails one by one.
